@@ -2,11 +2,11 @@ var Sequelize = require('sequelize');
 require('dotenv').config(); // No var, just require. Remember this.
 
 var sequelize = new Sequelize (
-    USER_DB,
-    DB_USERNAME,
-    DB_PASSWORD,
+    process.env.USER_DB,
+    process.env.DB_USERNAME,
+    process.env.DB_PASSWORD,
     {
-        host: DB_HOST,
+        host: process.env.DB_HOST,
         dialect: 'mysql',
         port: 3306
     }
